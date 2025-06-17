@@ -2,13 +2,14 @@ return {
   {
     "scottmckendry/cyberdream.nvim",
     lazy = true,
+    config = function()
+      require("cyberdream").setup {
+        theme = "dark",
+      }
+    end,
   },
   {
     "p00f/alabaster.nvim",
-    lazy = true,
-  },
-  {
-    "catppuccin/vim",
     lazy = true,
   },
   {

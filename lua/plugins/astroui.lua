@@ -6,9 +6,11 @@
 ---@type LazySpec
 return {
   "AstroNvim/astroui",
+  version = false,
+  branch = "v3",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "astrodark",
+    colorscheme = "tokyonight-moon",
     folding = {
       -- whether a buffer should have folding can be true/false for global enable/disable or fun(bufnr:integer):boolean
       enabled = function(bufnr) return require("astrocore.buffer").is_valid(bufnr) end,
@@ -19,6 +21,9 @@ return {
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
+        IndentGuide = {
+          bg = "#000000", -- aqui a cor que você quiser para a indent guide
+        },
         -- Normal = { bg = "#000000" },
       },
       astrodark = { -- a table of overrides/changes when applying the astrotheme theme
@@ -42,11 +47,11 @@ return {
       GitAdd = "[+]",
     },
     status = {
-      -- Configure attributes of components defined in the `status` API. Check the AstroNvim documentation for a complete list of color names, this applies to colors that have `_fg` and/or `_bg` names with the suffix removed (ex. `git_branch_fg` as attributes from `git_branch`).
+      -- Configure attributes of components defined in the status API. Check the AstroNvim documentation for a complete list of color names, this applies to colors that have _fg and/or _bg names with the suffix removed (ex. git_branch_fg as attributes from git_branch).
       attributes = {
         git_branch = { bold = true },
       },
-      -- Configure colors of components defined in the `status` API. Check the AstroNvim documentation for a complete list of color names.
+      -- Configure colors of components defined in the status API. Check the AstroNvim documentation for a complete list of color names.
       colors = {
         git_branch_fg = "#ABCDEF",
       },
