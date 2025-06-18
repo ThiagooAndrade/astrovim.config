@@ -6,27 +6,15 @@
 ---@type LazySpec
 return {
   "AstroNvim/astroui",
-  version = false,
-  branch = "v3",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "tokyonight-moon",
-    folding = {
-      -- whether a buffer should have folding can be true/false for global enable/disable or fun(bufnr:integer):boolean
-      enabled = function(bufnr) return require("astrocore.buffer").is_valid(bufnr) end,
-      -- a priority list of fold methods to try using, available methods are "lsp", "treesitter", and "indent"
-      methods = { "lsp", "treesitter", "indent" },
-    },
-
+    colorscheme = "astrodark",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
         IndentGuide = {
           bg = "#000000", -- aqui a cor que você quiser para a indent guide
         },
-        -- Normal = { bg = "#000000" },
-      },
-      astrodark = { -- a table of overrides/changes when applying the astrotheme theme
         -- Normal = { bg = "#000000" },
       },
     },
@@ -71,7 +59,8 @@ return {
         left = { "", "  " },
         right = { "  ", "" },
         center = { "  ", "  " },
-        tab = { "", "" },
+        -- tab = { "", "" },
+        tab = { "esquerda", "direita" },
         breadcrumbs = "  ",
         path = "  ",
       },

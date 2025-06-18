@@ -1,4 +1,9 @@
 return {
+  { "folke/tokyonight.nvim", lazy = true },
+  { "sainnhe/everforest", lazy = true },
+  { "craftzdog/solarized-osaka.nvim", lazy = true, opts = {
+    transparent = true,
+  } },
   {
     "scottmckendry/cyberdream.nvim",
     lazy = true,
