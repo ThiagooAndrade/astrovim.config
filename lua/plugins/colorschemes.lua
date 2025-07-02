@@ -1,4 +1,8 @@
 return {
+  {
+    "vinitkumar/oscura-vim",
+    lazy = false,
+  },
   { "folke/tokyonight.nvim", lazy = true },
   { "sainnhe/everforest", lazy = true },
   { "craftzdog/solarized-osaka.nvim", lazy = true, opts = {

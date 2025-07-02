@@ -8,13 +8,10 @@ return {
   "AstroNvim/astroui",
   ---@type AstroUIOpts
   opts = {
-    colorscheme = "astrodark",
+    colorscheme = "oscura",
     -- AstroUI allows you to easily modify highlight groups easily for any and all colorschemes
     highlights = {
       init = { -- this table overrides highlights in all themes
-        IndentGuide = {
-          bg = "#000000", -- aqui a cor que você quiser para a indent guide
-        },
         -- Normal = { bg = "#000000" },
       },
     },
@@ -59,7 +56,7 @@ return {
         left = { "", "  " },
         right = { "  ", "" },
         center = { "  ", "  " },
-        tab = { "", "" },
+        -- tab = { "", "" },
         -- tab = { "esquerda", "direita" },
         breadcrumbs = "  ",
         path = "  ",
